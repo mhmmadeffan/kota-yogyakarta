@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+nav a{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+
+/*hover,dll memberi efek ketika kursor diarahkan ke navigasi */
+nav a:hover{ 
+    font-weight: bold;
+}
+.jumbotron{
+    font-size: 20px;
+    padding: 60px;
+    background-color: #00c8eb;
+    text-align: center;
+    color: white;
+}
+
+nav{
+    background-color: #00a2c6;
+    padding: 5px;
+    position: sticky;
+    top: 0; /*supaya posisi navigasi berada di atas */
+}
+
+/*supaya navigasi selalu muncul disetiap halaman */
+header{
+    display: inline;
+}
+
+nav li{
+    display: inline; /*tulisan berada satu baris yang sama */
+    list-style-type: none; /*none untuk menghilangkan simbol list pada unorder list maupun order list */
+    margin-right: 20px; /*memberi jarak antar navigasi rata kanan sejauh 20px */
+
+}
+
+.profile header{
+    text-align: center; /*posisi tulisan rata tengah*/
+}
+
+body{
+    font-family:  'Quicksand',sans-serif;
+    margin: 0; /*untuk melakukan format default ukuran margin browser */
+    padding: 0; /*untuk melakukan format default ukuran padding browser */
+}
+
+main{
+    padding: 20px; /*memberi jarak antar konten */
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px; /*sudut box melengkung sebesar 5px */
+    padding: 20px; 
+    margin-top: 20px;
+}
+
+.featured-image{
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+h2 {
+    color: #00a2c6;
+}
+
+h3 {
+    color: #00a2c6;
+}
+
+footer{
+    padding: 20px;
+    color: white;
+    background-color: #00a2c6;
+    text-align: center;
+    font-weight: bold;
+}
+
+.profile img{
+    width: 200px; /*lebar logo atau lambang sebesar 200px */
+}
+
+/*Untuk memindahkan profile card di samping konten elemen */
+#content{
+float: left;
+width: 75%;
+}
+
+/*supaya footer tidak ngambang ke atas,karena elemen profile card keluar dari normal flow */
+aside{
+    float: right;
+    width: 25%;
+    padding-left: 20px; /* untuk memberikan jarak antara content dan aside*/
+}
+/* jika main tidak ditetapkan seperti dibawah,maka dapat menyebabkan nilai elemen <main> sekarang memiliki tinggi 0px. Di mana #content dan elemen <aside> dianggap tidak ada, sehingga elemen <footer> akan naik mengisi ruang yang kosong. 
+Agar #content dan elemen <aside> dianggap ada oleh <main> (sebagai induk elemennya) kita perlu tetapkan nilai overflow: auto; pada main.*/
+/*menetapkan footer barada di bawah dengan overflow:auto */
+main{
+    padding: 20px;
+    overflow: auto;
+}
+*{
+    box-sizing: border-box; /* penunjang padding-left supaya posisi berada di samping,karena lebar nya bukan 25% lagi */
+}
+
+/*fitur ini berfungsi ketika web diakses melalui device dengan ukuran viewport 1000px (nilai max-width relatif tergantung kebutuhan).  */
+@media screen and (max-width: 1000px){
+    #content,aside{
+        width: 100%;
+        padding: 0;
+    }
+}
